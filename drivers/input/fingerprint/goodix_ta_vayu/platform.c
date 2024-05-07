@@ -35,6 +35,13 @@ int gf_parse_dts(struct gf_dev *gf_dev)
 		return -EPERM;
 	}
 
+	rc = gpio_request(gf_dev->pwr_gpio, "goodix_pwr");
+
+	if (rc) {
+		dev_err(&gf_dev->spi->dev, "Failed to request PWR GPIO. rc = %d\n", rc);
+		return -EPERM;
+	}
+
 #endif
 	/*get reset resource*/
 	gf_dev->reset_gpio = of_get_named_gpio(gf_dev->spi->dev.of_node,
