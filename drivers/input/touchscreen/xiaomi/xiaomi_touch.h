@@ -95,7 +95,7 @@ enum MODE_TYPE {
 	Touch_FodIcon_Enable   = 16,
 	Touch_Nonui_Mode       = 17,
 	Touch_Debug_Level      = 18,
-	Touch_Mode_NUM         = 19,
+	Touch_Mode_NUM         = 14,
 };
 
 struct xiaomi_touch_interface {
